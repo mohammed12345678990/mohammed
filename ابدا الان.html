@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصه الدكتور في القدرات</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #00d2d3);
+    color: #fff;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e65c00;
+}
+
+.hero-image {
+    display: none;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.signup-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.signup-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.signup-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.signup-form input {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.signup-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.signup-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+</style>
+<body>
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>ابدأ رحلتك معنا اليوم!</h1>
+                <p>انضم إلينا واستفد من أفضل الموارد والدورات التدريبية التي نقدمها. لا تفوت الفرصة، وسجل الآن لتبدأ في تحقيق أهدافك.</p>
+                <a href="#signup" class="btn-primary">حصص البث المباشره</a>
+                <a class="btn-primary" href="">حصص المسجله</a>
+                <br><br><br><br><br><br>
+                <a class="btn-primary" href="">ماقبل التاسيس</a>
+                <a class="btn-primary" href="">التاسيس</a>
+                <br><br><br><br><br><br>
+                <a class="btn-primary" href="">النماذج</a>
+                <a class="btn-primary" href="">البنوك</a>
+            </div>
+            <div class="hero-image">
+                <img src=".//459d995a-400d-4711-b4c3-b428ea9e0f59.jpg" alt="ابدأ الآن">
+            </div>
+        </div>
+    </section>
+
+    <section id="signup" class="signup-section">
+        <div class="container">
+            <h2>سجل الآن للحصول على وصول فوري</h2>
+            <form class="signup-form" action="#" method="post">
+                <label for="name">الاسم الكامل:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">سجل الآن</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

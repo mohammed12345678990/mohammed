@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصه الدكتور في القدرات</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .course-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .course-card:hover {
+            transform: scale(1.02);
+        }
+        .course-card-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        .course-card-body {
+            padding: 20px;
+        }
+        .course-card-body h3 {
+            margin-top: 0;
+        }
+        .course-card-body p {
+            margin: 10px 0;
+        }
+        .course-card-footer {
+            padding: 15px;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        .course-card-footer a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .course-card-footer a:hover {
+            text-decoration: underline;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        h2{
+            direction: rtl;
+        }
+        p{
+            direction: rtl;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>الدورات التدريبية المتاحة</h1>
+</header>
+
+<div class="container">
+    <div class="grid-container">
+        <div class="course-card">
+            <div class="course-card-header">
+                <h2>دورة في التاسيس</h2>
+            </div>
+            <div class="course-card-body">
+                <h3>تعلم اساسيات القدرات في الكمي</h3>
+                <p><strong>عدد الحصص :</strong>30 حصه</p>
+                <p><strong>مدة الدورة:</strong>1</p>
+                <p><strong>المدرس:</strong>د. الحسن ضياء</p>
+                
+            </div>
+            <div class="course-card-footer">
+                <a href="#">عرض التفاصيل</a>
+            </div>
+        </div>
+        <div class="course-card">
+            <div class="course-card-header">
+                <h2>دوره النماذج</h2>
+            </div>
+            <div class="course-card-body">
+                <h3>شرح النماذج الخاصه بكتاب الدكتور</h3>
+                <p><strong>عدد الحصص:</strong>70 حصه</p>
+                <p><strong>مدة الدورة:</strong> 1 ساعة</p>
+                <p>حل التمارين و النماذج الخاصه بكتاب الدكتور في القدرات ونماذج اخرى من مصادؤ اخرى</p>
+            </div>
+            <div class="course-card-footer">
+                <a href="#">عرض التفاصيل</a>
+            </div>
+        </div>
+        <!-- أضف المزيد من الدورات هنا -->
+    </div>
+</div>
+<div class="course-card">
+    <div class="course-card-header">
+        <h2>دوره البنوك</h2>
+    </div>
+    <div class="course-card-body">
+        <h3>شرح البنوك الخاصه بكتاب الدكتور</h3>
+        <p><strong>عدد الحصص:</strong>الحصص مسجله </p>
+        <p><strong>مدة الدورة:</strong> ساعه و</p>
+        <p>حل التمارين و النماذج الخاصه بكتاب الدكتور في القدرات ونماذج اخرى من مصادؤ اخرى</p>
+    </div>
+    <div class="course-card-footer">
+        <a href="#">عرض التفاصيل</a>
+    </div>
+</div>
+<!-- أضف المزيد من الدورات هنا -->
+</div>
+</div>
+</body>
+</html>

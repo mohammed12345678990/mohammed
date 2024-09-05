@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصه الدكتور في القدرات</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 20px;
+        }
+        .message.error {
+            color: red;
+        }
+        .message.success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>تسجيل حساب جديد</h1>
+        <form id="registrationForm">
+            <input type="text" id="name" name="name" placeholder="الاسم الكامل" required>
+            <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required>
+            <input type="password" id="password" name="password" placeholder="كلمة المرور" required>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="تأكيد كلمة المرور" required>
+            <button type="submit">تسجيل</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // منع إرسال النموذج بشكل افتراضي
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            var messageElement = document.getElementById('message');
+
+            // التحقق من صحة البيانات
+            if (password !== confirmPassword) {
+                messageElement.textContent = 'كلمات المرور لا تطابق!';
+                messageElement.className = 'message error';
+                return;
+            }
+
+            // إرسال البيانات إلى الخادم (يمكنك استخدام AJAX أو Fetch API هنا)
+            // سأستخدم رسائل التوضيح للتوضيح فقط
+            if (name && email && password) {
+                // استبدل هذا بتقديم البيانات إلى خادمك
+                messageElement.textContent = 'تم التسجيل بنجاح!';
+                messageElement.className = 'message success';
+            } else {
+                messageElement.textContent = 'يرجى ملء جميع الحقول.';
+                messageElement.className = 'message error';
+            }
+        });
+    </script>
+</body>
+</html>

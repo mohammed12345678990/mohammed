@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصه الدكتور في القدرات</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+        }
+        .fb-login-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>تسجيل الدخول باستخدام فيسبوك</h1>
+        <!-- Facebook Login Button -->
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ar_AR/sdk.js"></script>
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : 'YOUR_APP_ID', // استبدل YOUR_APP_ID بمعرف تطبيقك من فيسبوك
+                    cookie     : true,  // تمكين ملفات تعريف الارتباط لتمكين تسجيل الدخول
+                    xfbml      : true,  // تمكين معالجة عناصر واجهة المستخدم
+                    version    : 'v15.0' // إصدار Facebook API الذي تستخدمه
+                });
+
+                FB.AppEvents.logPageView();   
+
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                });
+            };
+
+            function statusChangeCallback(response) {
+                if (response.status === 'connected') {
+                    // المستخدم مسجل الدخول إلى فيسبوك ومتصل بتطبيقك
+                    console.log('Logged in and authenticated');
+                    console.log('Access Token: ', response.authResponse.accessToken);
+                } else {
+                    // المستخدم ليس مسجلاً الدخول أو لا يمتلك إذن
+                    console.log('User not authenticated');
+                }
+            }
+
+            function checkLoginState() {
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                });
+            }
+        </script>
+        <fb:login-button
+            scope="public_profile,email"
+            onlogin="checkLoginState();"
+            size="large"
+            data-width=""
+            data-height=""
+            data-size="large"
+            data-button-type="login_with"
+            data-auto-logout-link="false"
+            data-use-continue-as="false">
+        </fb:login-button>
+    </div>
+</body>
+</html>
